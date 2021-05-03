@@ -1,0 +1,41 @@
+site_name: Unirom
+site_url: https://unirom.github.io/
+repo_url: https://github.com/unirom/unirom.github.io/
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+plugins:
+  - search
+  - with-pdf:
+      output_path: unirom.pdf
+
+extra_css:
+    - css/extra.css
+
+nav:
+    - 'index.md'
+    - 'installation.md'
+    - 'usage.md'
+    - 'advanced.md'
+    - 'debugger.md'
