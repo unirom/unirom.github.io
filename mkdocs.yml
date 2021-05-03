@@ -27,11 +27,6 @@ theme:
 
 plugins:
   - search
-  - with-pdf:
-      output_path: unirom.pdf
-
-extra_css:
-    - css/extra.css
 
 nav:
     - 'index.md'
