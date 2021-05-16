@@ -1,12 +1,12 @@
-`How do I install unirom?`
-Via Unirom!
 
-
+>Q: How do I install unirom?
+#### 
+A: Via Unirom!  
 Boot up the boot disc and it'll let you copy itsself to your cheat cart or memory card.
 
 ### Without Mod Chip
 
-- Download the bootdisc from [The unirom release page](https://github.com/JonathanDotCel/unirom8_bootdisc_and_firmware_for_ps1/releases/)
+- Download the bootdisc from [the unirom release page](https://github.com/JonathanDotCel/unirom8_bootdisc_and_firmware_for_ps1/releases/)
 - Burn to CD using ImgBurn.
 - Use the best CDRs you can find. A name brand like Verbatim tends to work no problem.
 - Use the lowest speed your writer supports.
@@ -15,7 +15,8 @@ Boot up the boot disc and it'll let you copy itsself to your cheat cart or memor
 - Don't stare at the fucking laser
 - Go to "Install" on the main page
 - Seriously, don't look at the fucking laser though.
-- Is my cheat cart supported? [Probably yes](#supported-cheat-carts)
+- [More info on flashing to cheat carts:](/installation/#rom-flashing)
+- [More info on flashing to mem cards:](/installation/#installing-via-freepsxboot)
 
 ### Using another cheat cart
 
@@ -30,7 +31,8 @@ There's a good chance your existing cheat cart can make the above swap easier:
 - Put the burned disc in the drive
 - Don't look at the fucking laser
 - Start the "game"
-- Is my cheat cart supported? [Probably yes](#supported-cheat-carts)
+- [More info on flashing to cheat carts:](/installation/#rom-flashing)
+- [More info on flashing to mem cards:](/installation/#installing-via-freepsxboot)
 
 ### Modded PS2 or PS3
 
@@ -42,6 +44,8 @@ There's a good chance your existing cheat cart can make the above swap easier:
 
 - Just burn the CD and boot it: [Download page](https://github.com/JonathanDotCel/unirom8_bootdisc_and_firmware_for_ps1/releases/)
 - Is my cheat cart supported? [Probably yes](#supported-cheat-carts)
+- [More info on flashing to cheat carts:](/installation/#rom-flashing)
+- [More info on flashing to mem cards:](/installation/#installing-via-freepsxboot)
 
 ### Supported Cheat Carts:
 
@@ -52,4 +56,89 @@ It's only the jankiest of jank knockoffs that might not. And most jank knockoffs
 
 - All Xplorer (V1, V2, V3, Pro, FX)
 - All Datel (V1, V2, V3): Action Replay, Equalizer, GameShark, etc.
-- Randos: Password Cart, Game Enhancer, Smart Cartridge, Gamars, EMS, Game Buster:
+- Randos: Password Cart, Game Enhancer, Smart Cartridge, Gamars, EMS, Game Buster, etc
+
+### Supported EEPROMs
+
+I think most if not all of the common 28 pin JEDEC varieties at this point.  
+Some carts cheaped out and used a ROM or a chip that was impossible to reprogram with the PS1's power supply.  
+In those cases, replace it?
+
+# Rom Flashing
+
+To install to a cheat cart, the installer will write over the existing ROM. You'll need the bootdisc in the drive for it to find the files.
+
+All cheat carts are at least 128k. This will fit unirom standalone.
+
+Some cheat carts have 256k or higher. These will allow you to dual boot unirom & caetla.
+
+The installer will attempt to auto-detect your cart type and size. If you've frankensteined a cart together, or have an unsupported chip, you can try to use the 'manual' setup option, and tell it roughly what to try. Every EEPROM I've encountered in the wild is currently supported.
+
+> It won't flash!
+
+- Try unirom_standalone
+- [Definitely start by updating to the latest version!](https://github.com/JonathanDotCel/unirom8_bootdisc_and_firmware_for_ps1/releases/)
+- Go to the `status` screen and see if it has any sort of valid ID or name for your card
+- Try forcing manual mode, 128k/256k from the manual cart detector
+
+> I wanna make a backup!
+
+- You can back it up via [nops](https://github.com/JonathanDotCel/NOTPSXSerial) if you care.
+- Or you can restore most carts from the boot disc: [Restoring ROMS](/installation/#restoring-roms)
+
+
+
+> Is my cheat cart supported?
+#### 
+[Probably yes](#supported-cheat-carts)
+
+
+
+# Installing via FreePSXBoot
+
+FreePSXBoot is the exploit (like FreeMCBoot for PS2) which allows you to boot unirom from the memory card.  
+Unirom will automatically detect your playstation bios version and install the appropriate card image of the same version.
+
+Many thanks to all of the FreePSXBoot contributers for their work on this!
+The FreePSXBoot Project page can be found here: [FreePSXBoot on GitHub](bit.ly/freepsxboot))
+
+If it's not working, please visit the above link and look for any special notes on your particular playstation model.  
+
+> Then what?
+
+- Start the PSX with the lid open (or no disc in).
+- FreePSXBoot card in the left slot
+- (Some playstations require any other card in the 2nd slot)
+- Open the memcard manager
+- You should get a progress bar...
+- Unirom will load a few seconds later.
+
+> Game crashes when I load it?
+
+Take the exploit card out before booting the game.
+
+> Nothing's happening
+
+Right card? Right slot? Did you check out the advice on the [FreePSXBoot GitHub page](bit.ly/freepsxboot))?
+
+> "Verify Failed" when installing
+
+Some cheap memory cards would not contain as much memory as they'd claim, or were just a bit slow/useless all round.
+Genuine, or good quality memory cards will be fine.
+
+> Can I use a Memory Card Pro?
+
+Yes!
+
+# Restoring ROMS
+
+You can restore most carts to their factory settings via this collection of ROMs on the boot disc.  
+Access it via the `Install` menu.
+
+The same general rules as [Rom Flashing](#rom-flashing) apply here.
+
+If you have an XFlash CD, you can also use the XFlash option to read the data from one of those.
+
+Many thanks to Squaresoft74 and kHn for maintaining this collection!
+Also thanks to Shendo for allowing us to use [PS1CardLink](https://github.com/ShendoXT/ps1cardlink)!
+
