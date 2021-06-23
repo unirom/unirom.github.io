@@ -31,7 +31,9 @@ PSX pins | FTDI pins
 ## FTDI FT232RL
 
 Connect PSX SIO pins  2, 5, 8 to the FTDI's Tx, Rx and Gnd. Done.
- 
+
+![FTDI to PSX](http://wiki.arthus.net/assets/ftdi-psx-pins.jpg)  
+
 ## 3.3V Arduino Uno  
 
 Some arduino unos have a jumper to use 3.3V instead of 5V levels. You can use such a board with an addintional resistor, like so : 
@@ -47,6 +49,8 @@ use a rpi if you have one lying around.
 
 Plug the PSX's serial output Rx/TX/Gnd to the GPIO14/pin 8 (Tx), GPIO15/pin 10 (Rx) and pin 6 (Gnd).
 
+![RPI to PSX serial connection](http://wiki.arthus.net/assets/rpi-psx-gpio.jpg)
+
 See here for the full solution : http://wiki.arthus.net/?psxdev-rpi_serial_over_network
 
 ## Reaspberry Pi Pico
@@ -54,7 +58,9 @@ See here for the full solution : http://wiki.arthus.net/?psxdev-rpi_serial_over_
 The new controller by Rpi foundation [can be used to](https://discord.com/channels/642647820683444236/642848627823345684/853875808367149077) with the Pico-uart-bridge firmware :  
 https://github.com/Noltari/pico-uart-bridge/releases  
 
-Use Pin 1 as Tx and Pin 2 as Rx.
+Use GPO 0/Pin 1 as Tx, GPO 1/Pin 2 as Rx and GPO 3/Pin 3 as Gnd :
+
+![Rpi pico pinout](http://wiki.arthus.net/assets/rpi-pico-uart.jpg)
 
 # From the PSX to the controller
 
@@ -62,7 +68,7 @@ Use Pin 1 as Tx and Pin 2 as Rx.
 
 Hack the cable, connect things and voila :
 
-![SCPH-1040](http://wiki.arthus.net/assets//link-usb-cable-scph1040-ftdi.jpg)
+![SCPH-1040](http://wiki.arthus.net/assets/link-usb-cable-scph1040-ftdi.jpg)
 
 Sources :
 http://www.psxdev.net/forum/viewtopic.php?f=62&t=349#p2592  
