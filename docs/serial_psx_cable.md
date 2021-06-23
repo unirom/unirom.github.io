@@ -7,7 +7,8 @@ This cable connects a PSX to a computer. If you combine this with a cart flashed
   * An  [FTDI FT232RL module](https://www.amazon.fr/gp/product/B0753GY7FR/) OR
   * An Arduino Uno **that supports 3.3V serial** OR
   * A [Raspberry Pi 0,1,2,3,4](http://wiki.arthus.net/?psxdev-rpi_serial_over_network) OR
-  * A [Raspberry Pi Pico](https://discord.com/channels/642647820683444236/642848627823345684/853875808367149077)
+  * A [Raspberry Pi Pico](https://discord.com/channels/642647820683444236/642848627823345684/853875808367149077) OR  
+  * A [CP2102 or CP2104](https://www.amazon.com/WINGONEER-CP2104-Serial-Converter-compatible/dp/B01CYBHM26/)  
   
 If you have these stuff lying around, this can help :
 
@@ -36,7 +37,7 @@ Connect PSX SIO pins  2, 5, 8 to the FTDI's Tx, Rx and Gnd. Done.
 
 ## 3.3V Arduino Uno  
 
-Some arduino unos have a jumper to use 3.3V instead of 5V levels. You can use such a board with an addintional resistor, like so : 
+Some arduino unos have a jumper to use 3.3V instead of 5V levels. You can use such a board with an additional resistor, like so : 
 
 ![Arduino 3.3V](http://wiki.arthus.net/assets//arduino-serial-psx.jpg)
 
@@ -53,7 +54,7 @@ Plug the PSX's serial output Rx/TX/Gnd to the GPIO14/pin 8 (Tx), GPIO15/pin 10 (
 
 See here for the full solution : http://wiki.arthus.net/?psxdev-rpi_serial_over_network
 
-## Reaspberry Pi Pico
+## Raspberry Pi Pico
 
 The new controller by Rpi foundation [can be used to](https://discord.com/channels/642647820683444236/642848627823345684/853875808367149077) with the Pico-uart-bridge firmware :  
 https://github.com/Noltari/pico-uart-bridge/releases  
@@ -61,6 +62,16 @@ https://github.com/Noltari/pico-uart-bridge/releases
 Use GPO 0/Pin 1 as Tx, GPO 1/Pin 2 as Rx and GPO 3/Pin 3 as Gnd :
 
 ![Rpi pico pinout](http://wiki.arthus.net/assets/rpi-pico-uart.jpg)
+
+## CP2102 / CP2104  
+
+The CP2102 and CP2104 are reported to work at least in /slow mode (115200 bauds).
+
+![Rpi pico pinout](http://wiki.arthus.net/assets/cp2102-04-pinout.jpg)
+
+## Others :
+
+* CH341 is reported to work in /slow mode (115200 bauds)
 
 # From the PSX to the controller
 
