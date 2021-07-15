@@ -15,6 +15,7 @@ If you have these stuff lying around, this can help :
   * A PSX SCPH-1040 serial cable, or half a cable
   * A dead PSX motherboard that has a serial port, or just the SIO socket 
   * Dupont wires
+  * Component AV Multi Out cable
   
 # Connection
 
@@ -102,6 +103,24 @@ Same as above except you don't even have to hack the SIO port off the motherboar
 ![Serial motherboard](https://thp.io/2020/images/psxserial/psx-serial-pinout.jpg)
 
 Sources : https://thp.io/2020/psxserial.html  
+
+## Method #4 : Component AV Multi Out cable adaptor to serial I/O
+
+Component AV Multi Out cables contains all 12 pins;  cutting the extra plastic of a component AV Multi Out Cable makes it fit perfectly on the Playstation's serial I/O port.  The extra pins sits open within the serial I/O port.
+
+A photo displaying how it looks like when connected:
+![AV Multi Out adaptor to serial I/O with extra plastic cut](https://i.imgur.com/J2GNOjL.jpg)
+
+One may cut the extra borders of the metal case with a mini saw blade, leaving a bit of base for it's lower part to remain connected;  here is a photo displaying how it looks like with it on:
+![AV Multi Out adaptor to serial I/O with metal case cut](https://i.imgur.com/feXONxf.jpg)
+
+A photo displaying how it looks like, when connected with it's AV Multi Out enclosure:
+![AV Multi Out adaptor to serial I/O connected with it's original enclosure on](https://i.imgur.com/UrbGMGA.jpeg)
+
+A photo displaying the adaptor dowside-up:
+![AV Multi Out adaptor to serial I/O downside-up](https://i.imgur.com/SuQ36HS.jpeg)
+
+Source : Anonymous
 
 ## Sources 
 
