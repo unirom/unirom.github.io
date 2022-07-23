@@ -142,3 +142,21 @@ If you have an XFlash CD, you can also use the XFlash option to read the data fr
 Many thanks to Squaresoft74 and kHn for maintaining this collection!
 Also thanks to Shendo for allowing us to use [PS1CardLink](https://github.com/ShendoXT/ps1cardlink)!
 
+
+## Which rom file is which?
+
+### unirom_standalone.rom
+The standalone version of the rom.
+It's under 128k and fits on any old cart.
+
+### unirom_withcaetla.rom
+For 256k carts or bigger.
+(The installer will let you know)
+If your cart has enough space, you can install unirom and caetla side by side.
+
+### unirom_datelv2_withcaetla.rom
+The V2 versions of datel carts (not V1, not V3, etc, lol) have a weird memory map with a big gap in the middle. If you want to dualboot unirom + caetla, you'll need this.
+If you don't want caetla, you could use the unirom_standalone.rom
+
+Note: unirom will hijack the initial switch state.
+

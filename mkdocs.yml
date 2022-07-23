@@ -33,5 +33,6 @@ nav:
     - 'installation.md'
     - 'usage.md'
     - 'advanced.md'
-    - 'debugger.md'
+    - 'debug_nops.md'
+    - 'debug_gdb.md'
     - 'serial_psx_cable.md'

@@ -1,16 +1,24 @@
 # USB to Serial PSX cable
 
-This cable connects a PSX to a computer. If you combine this with a cart flashed with unirom, you can interract with the PSX from your computer, upload executables, access the console's memory...
+This cable connects a PSX to a computer. 
 
-## What you can use :
+You can then interact with the following to upload/download binary data, peek/poke, hook r/w/x, launch executables, etc...
 
-  * An  [FTDI FT232RL module](https://www.amazon.fr/gp/product/B0753GY7FR/) OR
+- Unirom booted from a cheat cart
+- Unirom booted from a memory card
+- Unirom booted from a CD
+
+
+
+## Suitable USB/Serial adapters :
+
+  * An [FTDI FT232RL module](https://www.amazon.fr/gp/product/B0753GY7FR/) OR
   * An Arduino Uno **that supports 3.3V serial** OR
   * A [Raspberry Pi 0,1,2,3,4](http://wiki.arthus.net/?psxdev-rpi_serial_over_network) OR
   * A [Raspberry Pi Pico](https://discord.com/channels/642647820683444236/642848627823345684/853875808367149077) OR  
   * A [CP2102 or CP2104](https://www.amazon.com/WINGONEER-CP2104-Serial-Converter-compatible/dp/B01CYBHM26/)  
   
-If you have these stuff lying around, this can help :
+If you have this stuff lying around, this can help :
 
   * A PSX SCPH-1040 serial cable, or half a cable
   * A dead PSX motherboard that has a serial port, or just the SIO socket 

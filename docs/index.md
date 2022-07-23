@@ -1,16 +1,23 @@
-# UniROM Bootdisc, Firmware, Shell for PSX
+# Unirom Home
+
+## Bootdisc, Firmware, Shell for PSX
 
 Custom Xplorer, Action replay and cheat cart firmware, bootdisc, import player, region switcher, FreePSXBoot installer, Memcard manager, kernel resident debugger...
 
-## At least read this bit:
+## At a glance:
 
-You can install unirom to a cheat cart or memory card... or by burning a copy of the boot CD.
+You can boot Unirom from disc, a memory card, or a cheat cartridge.
 
-#### You burn + boot the bootdisc, then use the installers on it.
+Typically:
 
-Installing to a *cheat cart* lets you boot into unirom in about a second, and dual boot Caetla.
+- >You burn the bootdisc and launch Unirom from it.
+- >Unirom can then install itsself to memory card or cheat cart.
+- >You can now boot from memory card or cheat cart instead if you want.
+
+Installing to a *cheat cart* lets you boot in about a second, and dual boot Caetla.
 
 Installing to a *memory card* + FreePSXBoot allows you to use models with no parallel port: PSOne, SCPH9000, etc.
+
 
 >How do I install it?  
 [Installing from CD](/installation/#installing-from-cd)
@@ -70,6 +77,11 @@ Okay, at a minimum I need to know:
 
 Don't forget the info above!
 
+## Thanks
 
+Big thanks to Nicolas Noble for putting together this mkdocs template + build scripts!
 
+## Developers
+
+If you're interested in PSX development in general, drop by the psx.dev discord at [http://PSX.dev](http://psx.dev)
 

@@ -8,7 +8,7 @@ Placeholder.
 ## PC-Side serial tools
 
 The serial tool to connect to PC is called NOTPSXSerial, or "nops" for short.
-[NOTPSXSerial](https://github.com/JonathanDotCel/NOTPSXSerial) (aka "nops").
+[nops](https://github.com/JonathanDotCel/NOTPSXSerial) (aka "NotPSXSerial").
 
 - It's included with the boot disc by default.
 - You'll need a standard USB to UART dongle. They're like 4 dollars on Amazon.
@@ -18,6 +18,7 @@ The serial tool to connect to PC is called NOTPSXSerial, or "nops" for short.
 >Can I use the parallel port?
 
 Nah, unlikely. It's clunky, awkward, most carts need a voltage level adapter and it's 2021.
+
 
 ### Supported functions:
 
