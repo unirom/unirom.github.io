@@ -13,6 +13,9 @@ This is still an beta in-development feature, so be sure to swing by the Discord
 <br>
 # Installation
 
+Download the nops + unirom beta package:
+[https://github.com/johnbaumann/unirom.github.io/releases/download/8.0.Kish/nops.gdb_unirom_beta.zip](https://github.com/johnbaumann/unirom.github.io/releases/download/8.0.Kish/nops.gdb_unirom_beta.zip)
+
 Other than, the nops/uni, you'll need a copy of gdb for your platform:
 
 ### Windows:
