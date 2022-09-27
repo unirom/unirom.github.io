@@ -132,16 +132,13 @@ Source : Anonymous
 
 ## Sources 
 
-PSX Serial port pinout :  
-https://www.problemkaputt.de/psx-spx.htm#pinouts  
+[PSX Serial port pinout](https://psx-spx.consoledev.net/pinouts/#pinouts-sio-pinouts)  
 
-Method #1 :  
-http://www.psxdev.net/forum/viewtopic.php?f=62&t=349#p2592  
-http://www.psxdev.net/forum/viewtopic.php?t=497#p3556  
+[Method #1a](https://www.psxdev.net/forum/viewtopic.php?f=62&t=349#p2592)  
+[Method #1b](https://www.psxdev.net/forum/viewtopic.php?t=497#p3556)  
 
-Method #2 :  
-http://www.psxdev.net/forum/viewtopic.php?t=744&sid=ff1cc884ceaaa4267404e61e81130320#p6524  
+[Method #2](https://www.psxdev.net/forum/viewtopic.php?t=744&sid=ff1cc884ceaaa4267404e61e81130320#p6524)
 
-Method #3 :  
-https://thp.io/2020/psxserial.html  
-Méthode 4 : http://www.psxdev.net/forum/viewtopic.php?f=47&t=760&p=19081  
+[Method #3](https://thp.io/2020/psxserial.html)
+
+[Method #4](https://www.psxdev.net/forum/viewtopic.php?f=47&t=760&p=19081)
