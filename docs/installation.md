@@ -36,7 +36,7 @@ There's a good chance your existing cheat cart can make the above swap easier:
 
 ### Modded PS2 or PS3
 
-- Grab the FreePSXBoot+Unirom images from: [FreePSXBoot](bit.ly/freepsxboot))
+- Grab the FreePSXBoot+Unirom images from: [FreePSXBoot](https://bit.ly/freepsxboot))
 - Write them to a memory card.
 - Profit?
 
