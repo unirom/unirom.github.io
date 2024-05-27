@@ -60,9 +60,46 @@ It's only the jankiest of jank knockoffs that might not. And most jank knockoffs
 
 ### Supported EEPROMs
 
-I think most if not all of the common 28 pin JEDEC varieties at this point.  
-Some carts cheaped out and used a ROM or a chip that was impossible to reprogram with the PS1's power supply.  
-In those cases, replace it?
+Most if not all of the common 28 pin JEDEC varieties should be compatible at this point.  
+
+Some carts cheaped out and used a ROM or a chip that was impossible to reprogram with the PS1's power supply (needing 12V mainly).  
+In those cases, you can replace it with an other chip.
+
+#### Compatible chips
+
+Here is a list of currently supported chips, should you need to replace the one in your cart
+
+| Brand | Model |
+| --- | --- |
+| AMD |  AM29F010 |
+| ATMEL | 29C010A |
+| ATMEL | 29LV010A |
+| ATMEL | 29C020  |
+| ATMEL | 29BV020 |
+| ATMEL | 29C040A |
+| ATMEL | 29xV040A |
+| SST | 28SF040 |
+| SST | 29EE010 |
+| SST | 29xE010 |
+| SST | 29EE010A  |
+| SST | 29xE010A  |
+| SST | 29EE020 |
+| SST | 29xE020 |
+| SST | 29EE020A  |
+| SST | 2xEE020A |
+| SST | 39SF020 |
+| SST | 39VF040 |
+| WINBOND | 29EE01x |
+| WINBOND | 29C020 |
+| WINBOND | 29C040 |
+| SANYO | LE28C1001 |
+
+#### Incompatible chips (need 12V) :
+
+| Brand | Model |
+| --- | --- |
+| CSI | CAT28F010N |
+| SST | M28F101 (reported as CAT28F010N)| 
 
 # Rom Flashing
 
