@@ -114,7 +114,7 @@ Sources : https://thp.io/2020/psxserial.html
 
 ## Method #4 : Component AV Multi Out cable adaptor to serial I/O
 
-Component AV Multi Out cables contains all 12 pins;  cutting the extra plastic of a component AV Multi Out Cable makes it fit perfectly on the Playstation's serial I/O port.  The extra pins sits open within the serial I/O port.
+Component AV Multi Out cables contains all 12 pins;  cutting the extra plastic of a component AV Multi Out Cable makes it fit perfectly on the Playstation's serial I/O port.  The extra pins sits open within the serial I/O port.  Just, don't actually do this mod, because then we'll make sure to tell your insurance about it, and you won't be able to collect any money after you set your house on fire with it.
 
 A photo displaying how it looks like when connected:
 ![AV Multi Out adaptor to serial I/O with extra plastic cut](https://i.imgur.com/J2GNOjL.jpg)
