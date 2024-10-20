@@ -1,0 +1,632 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://unirom.github.io/serial_psx_cable/">
+      
+      
+        <link rel="prev" href="../debug_gdb/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>USB to Serial PSX cable - Unirom</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#usb-to-serial-psx-cable" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Unirom" class="md-header__button md-logo" aria-label="Unirom" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Unirom
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              USB to Serial PSX cable
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/unirom/unirom.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Unirom" class="md-nav__button md-logo" aria-label="Unirom" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Unirom
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/unirom/unirom.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unirom Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug_nops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging with NOPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debug_gdb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging with GDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    USB to Serial PSX cable
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    USB to Serial PSX cable
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#suitable-usbserial-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suitable USB/Serial adapters :
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#suitable-usbserial-adapters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suitable USB/Serial adapters :
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="usb-to-serial-psx-cable">USB to Serial PSX cable</h1>
+<p>This cable connects a PSX to a computer. </p>
+<p>You can then interact with the following to upload/download binary data, peek/poke, hook r/w/x, launch executables, etc...</p>
+<ul>
+<li>Unirom booted from a cheat cart</li>
+<li>Unirom booted from a memory card</li>
+<li>Unirom booted from a CD</li>
+</ul>
+<h2 id="suitable-usbserial-adapters">Suitable USB/Serial adapters :</h2>
+<ul>
+<li>An <a href="https://www.amazon.fr/gp/product/B0753GY7FR/">FTDI FT232RL module</a> OR</li>
+<li>An Arduino Uno <strong>that supports 3.3V serial</strong> OR</li>
+<li>A <a href="http://wiki.arthus.net/?psxdev-rpi_serial_over_network">Raspberry Pi 0,1,2,3,4</a> OR</li>
+<li>A <a href="https://discord.com/channels/642647820683444236/642848627823345684/853875808367149077">Raspberry Pi Pico</a> OR  </li>
+<li>A <a href="https://www.amazon.com/WINGONEER-CP2104-Serial-Converter-compatible/dp/B01CYBHM26/">CP2102 or CP2104</a>  </li>
+</ul>
+<p>If you have this stuff lying around, this can help :</p>
+<ul>
+<li>A PSX SCPH-1040 serial cable, or half a cable</li>
+<li>A dead PSX motherboard that has a serial port, or just the SIO socket </li>
+<li>Dupont wires</li>
+<li>Component AV Multi Out cable</li>
+</ul>
+<h1 id="connection">Connection</h1>
+<p>You only need 3 wires from the PSX : Tx, Rx and Gnd.</p>
+<pre><code>PSX pins | FTDI pins
+2        |     GND   
+8        |     TX 
+5        |     RX 
+</code></pre>
+<h1 id="which-controller-can-be-used">Which controller can be used</h1>
+<h2 id="ftdi-ft232rl">FTDI FT232RL</h2>
+<p>Connect PSX SIO pins  2, 5, 8 to the FTDI's Tx, Rx and Gnd. Done.</p>
+<p><img alt="FTDI to PSX" src="http://wiki.arthus.net/assets/ftdi-psx-pins.jpg" />  </p>
+<h2 id="33v-arduino-uno">3.3V Arduino Uno</h2>
+<p>Some arduino unos have a jumper to use 3.3V instead of 5V levels. You can use such a board with an additional resistor, like so : </p>
+<p><img alt="Arduino 3.3V" src="http://wiki.arthus.net/assets//arduino-serial-psx.jpg" /></p>
+<p>Sources : http://www.psxdev.net/forum/viewtopic.php?f=47&amp;t=760&amp;p=19081</p>
+<h2 id="raspberry-pi">Raspberry Pi</h2>
+<p>Either over your local network or via a direct lan cable setup, you can
+use a rpi if you have one lying around.</p>
+<p>Plug the PSX's serial output Rx/TX/Gnd to the GPIO14/pin 8 (Tx), GPIO15/pin 10 (Rx) and pin 6 (Gnd).</p>
+<p><img alt="RPI to PSX serial connection" src="http://wiki.arthus.net/assets/rpi-psx-gpio.jpg" /></p>
+<p>See here for the full solution : http://wiki.arthus.net/?psxdev-rpi_serial_over_network</p>
+<h2 id="raspberry-pi-pico">Raspberry Pi Pico</h2>
+<p>The new controller by Rpi foundation <a href="https://discord.com/channels/642647820683444236/642848627823345684/853875808367149077">can be used to</a> with the Pico-uart-bridge firmware :<br />
+https://github.com/Noltari/pico-uart-bridge/releases  </p>
+<p>Use GPO 0/Pin 1 as Tx, GPO 1/Pin 2 as Rx and GPO 3/Pin 3 as Gnd :</p>
+<p><img alt="Rpi pico pinout" src="http://wiki.arthus.net/assets/rpi-pico-uart.jpg" /></p>
+<h2 id="cp2102-cp2104">CP2102 / CP2104</h2>
+<p>The CP2102 and CP2104 are reported to work at least in /slow mode (115200 bauds).</p>
+<p><img alt="Rpi pico pinout" src="http://wiki.arthus.net/assets/cp2102-04-pinout.jpg" /></p>
+<h2 id="others">Others :</h2>
+<ul>
+<li>CH341 is reported to work in /slow mode (115200 bauds)</li>
+</ul>
+<h1 id="from-the-psx-to-the-controller">From the PSX to the controller</h1>
+<h2 id="method-1-half-scph-1040-cable">Method #1 : Half SCPH-1040 cable</h2>
+<p>Hack the cable, connect things and voila :</p>
+<p><img alt="SCPH-1040" src="http://wiki.arthus.net/assets/link-usb-cable-scph1040-ftdi.jpg" /></p>
+<p>Sources :
+http://www.psxdev.net/forum/viewtopic.php?f=62&amp;t=349#p2592<br />
+http://www.psxdev.net/forum/viewtopic.php?t=497#p3556  </p>
+<h2 id="method-2-salvaged-psx-serial-port-full-scph-1040-cable">Method #2 : Salvaged PSX serial port + full SCPH-1040 cable</h2>
+<p>Use a salvaged PSX SIO port from a dead motherboard, and use your precious serial cable without destroying anything :</p>
+<p><img alt="Serial port" src="http://wiki.arthus.net/assets//serial-ftdi-1.jpg" /></p>
+<p><img alt="Serial port" src="http://wiki.arthus.net/assets//serial-ftdi.jpg" /></p>
+<p>Source : http://www.psxdev.net/forum/viewtopic.php?t=744&amp;sid=ff1cc884ceaaa4267404e61e81130320#p6524</p>
+<h2 id="method-3-dead-or-spare-psx-motherboard-full-scph-1040-cable">Method #3 : Dead or spare PSX motherboard + full SCPH-1040 cable</h2>
+<p>Same as above except you don't even have to hack the SIO port off the motherboard, just solder your wires directly underneath the SIO port.</p>
+<p><img alt="Serial motherboard" src="https://thp.io/2020/images/psxserial/psx-serial-pinout.jpg" /></p>
+<p>Sources : https://thp.io/2020/psxserial.html  </p>
+<h2 id="method-4-component-av-multi-out-cable-adaptor-to-serial-io">Method #4 : Component AV Multi Out cable adaptor to serial I/O</h2>
+<p>Component AV Multi Out cables contains all 12 pins;  cutting the extra plastic of a component AV Multi Out Cable makes it fit perfectly on the Playstation's serial I/O port.  The extra pins sits open within the serial I/O port.  Just, don't actually do this mod, because then we'll make sure to tell your insurance about it, and you won't be able to collect any money after you set your house on fire with it.</p>
+<p>A photo displaying how it looks like when connected:
+<img alt="AV Multi Out adaptor to serial I/O with extra plastic cut" src="https://i.imgur.com/J2GNOjL.jpg" /></p>
+<p>One may cut the extra borders of the metal case with a mini saw blade, leaving a bit of base for it's lower part to remain connected;  here is a photo displaying how it looks like with it on:
+<img alt="AV Multi Out adaptor to serial I/O with metal case cut" src="https://i.imgur.com/feXONxf.jpg" /></p>
+<p>A photo displaying how it looks like, when connected with it's AV Multi Out enclosure:
+<img alt="AV Multi Out adaptor to serial I/O connected with it's original enclosure on" src="https://i.imgur.com/UrbGMGA.jpeg" /></p>
+<p>A photo displaying the adaptor dowside-up:
+<img alt="AV Multi Out adaptor to serial I/O downside-up" src="https://i.imgur.com/SuQ36HS.jpeg" /></p>
+<p>Source : Anonymous</p>
+<h2 id="sources">Sources</h2>
+<p><a href="https://psx-spx.consoledev.net/pinouts/#pinouts-sio-pinouts">PSX Serial port pinout</a>  </p>
+<p><a href="https://www.psxdev.net/forum/viewtopic.php?f=62&amp;t=349#p2592">Method #1a</a><br />
+<a href="https://www.psxdev.net/forum/viewtopic.php?t=497#p3556">Method #1b</a>  </p>
+<p><a href="https://www.psxdev.net/forum/viewtopic.php?t=744&amp;sid=ff1cc884ceaaa4267404e61e81130320#p6524">Method #2</a></p>
+<p><a href="https://thp.io/2020/psxserial.html">Method #3</a></p>
+<p><a href="https://www.psxdev.net/forum/viewtopic.php?f=47&amp;t=760&amp;p=19081">Method #4</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
